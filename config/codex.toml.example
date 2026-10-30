@@ -1,0 +1,7 @@
+# Project scope only. No model override, credentials, personal paths or Codex update.
+# Copy to .codex/config.toml if project-scoped MCP is supported and trusted.
+[mcp_servers.playwright]
+command = "node"
+args = ["scripts/start-mcp.mjs"]
+startup_timeout_sec = 30
+tool_timeout_sec = 60

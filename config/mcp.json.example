@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "node",
+      "args": ["/ABSOLUTE/PATH/TO/hackathon-set/scripts/start-mcp.mjs"]
+    }
+  }
+}

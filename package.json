@@ -1,0 +1,30 @@
+{
+  "name": "cofa-exam-kit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test tests/unit/*.test.js",
+    "test:skills": "node scripts/check-skills.mjs",
+    "test:e2e": "playwright test",
+    "test:e2e:live": "playwright test --config=playwright.live.config.js",
+    "test:port": "node scripts/check-port.mjs",
+    "test:mcp": "node scripts/verify-mcp.mjs",
+    "mcp": "node scripts/start-mcp.mjs",
+    "browser:install": "playwright install chromium",
+    "check": "npm run test:skills && npm run test && npm run build && npm run test:port && npm run test:e2e",
+    "verify:live": "npm run test:e2e:live && npm run test:mcp"
+  },
+  "dependencies": { "papaparse": "5.7.0", "react": "19.3.1", "react-dom": "19.3.1" },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "@playwright/mcp": "0.0.83",
+    "@playwright/test": "1.64.1",
+    "@vitejs/plugin-react": "6.1.2",
+    "vite": "8.3.5"
+  }
+}

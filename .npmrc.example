@@ -1,0 +1,2 @@
+# Optional only; never commit a real .npmrc containing registry tokens.
+save-exact=true
