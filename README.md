@@ -158,7 +158,7 @@ npm run verify:live
 
 ## 스킬과 프롬프트
 
-프로젝트 스킬은 `.agents/skills/`에 **web-implementation / browser-verification / csv-data** 3개만 둡니다. 루트 `AGENTS.md`는 짧은 작업 규칙입니다. 스킬 인식이 안 되어도 [시작 프롬프트](docs/START_PROMPT.ko.md)는 파일을 직접 읽도록 안내합니다. 이 PC에 사용 가능한 Python이 없어 공식 Python 스킬 검증기는 실행하지 못했으며, 저장소의 Node 검사로 구조를 확인했습니다. 이는 모델이 스킬을 자동 선택했다는 검증과는 다릅니다.
+프로젝트 스킬은 `.agents/skills/`에 **web-implementation / browser-verification / csv-data** 3개만 둡니다. 루트 `AGENTS.md`는 짧은 작업 규칙입니다. 스킬 인식이 안 되어도 [시작 프롬프트](docs/START_PROMPT.ko.md)는 파일을 직접 읽도록 안내합니다. Node 구조 검사와 skill-creator의 공식 `quick_validate.py` 모두 3개 스킬이 통과했습니다. 공식 검사는 앱의 번들 Python 3.12.14와 커밋 제외 임시 폴더에 설치한 PyYAML 6.0.3으로 수행했으며, 시험 실행에는 Python이 필요 없습니다. 이는 모델이 스킬을 자동 선택했다는 검증과는 다릅니다.
 
 설정과 스킬 위치는 [공식 MCP 문서](https://learn.chatgpt.com/docs/extend/mcp?surface=cli), [공식 스킬 문서](https://learn.chatgpt.com/docs/build-skills)를 참고했습니다. Playwright 옵션은 [공식 Playwright MCP 저장소](https://github.com/microsoft/playwright-mcp)와 설치된 버전의 `--help`, `tools/list`로 확인했습니다.
 
