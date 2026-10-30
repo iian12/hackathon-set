@@ -23,7 +23,7 @@ try {
   pass('MCP handshake and tools/list');
   await call('browser_navigate', { url: 'http://localhost:3000' });
   const snapshot = await call('browser_snapshot');
-  assert.match(snapshot, /작게 만들고/); pass('page structure / accessibility snapshot');
+  assert.match(snapshot, /시험 시작 템플릿/); pass('page structure / accessibility snapshot');
   const inputRef = snapshot.match(/textbox "확인할 내용" \[ref=(e\d+)\]/)?.[1];
   const buttonRef = snapshot.match(/button "확인" \[ref=(e\d+)\]/)?.[1];
   assert.ok(inputRef && buttonRef, 'snapshot input/button refs');

@@ -3,8 +3,8 @@
 - 순서: 요구사항 정리 → 최소 구현 → 실행 → 브라우저 검증 → 수정 → 최종 확인.
 - 문제 원문을 기능·입력·출력·제약·합격 조건으로 짧게 정리한다. 모호한 부분은 가정을 표시한다.
 - 제공된 Codex와 기본 6.1 Sol을 유지한다. Codex 업데이트·모델 변경을 하지 않는다.
-- React 시작점은 `src/starter/Starter.jsx`. `src/practice/`는 연습 예제이며 문제 답안이 아니다.
-- 공통 도구는 `src/shared/`, 교체할 판단 규칙은 `src/domain/`, 샘플은 `public/samples/`.
+- React 시작점은 `src/starter/Starter.jsx`. 실제 문제의 요구사항에 맞춰 구현한다.
+- 공통 도구는 `src/shared/`. 문제별 판단 규칙·스키마·데이터는 UI와 분리해 별도 모듈에 작성한다.
 - 실행은 `npm run dev`: 0.0.0.0:3000 고정. 포트 충돌은 원인을 확인하고 다른 포트로 옮기지 않는다.
 - 의미 있는 동작·실패 입력·새로고침·콘솔 오류를 브라우저에서 확인한다. HTTP와 화면의 서버 ID도 비교한다.
 - 검증은 README의 `npm run check` 또는 실행 중 서버용 `npm run verify:live`를 사용한다.
